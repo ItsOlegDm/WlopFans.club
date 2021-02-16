@@ -1,0 +1,147 @@
+<?php
+session_start();
+ if($_SESSION['admin'] != "ghostblade"){
+ header("Location: login.php");    
+exit; 
+}
+?>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"> 
+</head>
+<body>
+
+<div class='intro'>
+    
+    <div class="textintro"><span class="wloph">WLOP</span><span class="wloph2">FANS</span></div>
+    <div class="intro-img"></div>
+    </div>
+<div class="alerttimely"><p id="alerttimely">Внимание! Сайт еще в разработке!</p></div>
+    <style>
+        .alerttimely {
+            position: absolute;
+            left: 0;
+            right: 0;
+            background-color: crimson;
+        }
+        #alerttimely {
+            font-family: Uni-Sans-Bold;
+            font-size: 40px;
+            color: white;
+            text-align: center;
+        }
+        .info {
+            padding-top: 30px;
+        }
+        @media screen and (max-width: 900px) {
+            .info {
+            padding-top: 150px;
+        }
+        }
+    </style>
+<div class="center">
+    <div class="info">
+    <div class="wlopphoto">
+        <img src="assets/img/photo_wlop.jpg" class="photo1">
+    </div>
+        <div class="infotext">
+            <p><b>Wang Ling</b> (кит. 王凌, 5 июня 1987) — китайский художник самоучка, известный под псевдонимом WLOP. Живет в Гонконге, работает инженером-программистом.</p>
+            <p>Предпочтение отдает фэнтези-тематике и средневековью. Особенностью стиля является изображение портретов женских персонажей. Довольно часто исполняет фан и концепт арты к популярным аниме или играм.</p>
+        </div>
+    </div>
+    </div>
+    <div class="cardsh"><span>Наши переводы</span></div>
+<div class="center">
+    <div class="cards">
+        <div class="card">
+            <img class="cardimg cardb" src="assets/img/gblogo.png">
+            <p class="cardtext"><b>Призрачный Клинок | Ghost Blade</b></p>
+            <div class="cardbutton">
+    <a class="button-text"><b>  Скоро  </b></a>
+            </div>
+        </div>
+
+
+
+        
+        <div class="paddingcard"></div>
+        <div class="card">
+            <img class="cardimg cardb" src="assets/img/interview.png">
+            <p class="cardtext"><b>Интервью с WLOP</b></p>
+            <div class="cardbutton">
+    <a class="button-text" href="/interview_cs/"><b> Открыть </b></a>
+            </div>
+        </div>
+
+
+        </div>
+         </div>
+
+<div class="cardsh"><span>Команда:</span></div>
+<div class="center">
+    <div  class="staffcards">
+        <div class="staff">
+         <div class="staffcard">
+           <div class="stavatar">  <img class="staffavatar" src="assets/img/avatars/aliya.png" alt="АХВХАВХАХВАХВАХВХАХВАХВАХВХАВХАХВАХВА" center></div>
+         <div class="stafftext">
+            <div> <span class="staffh"><b>Алия</b></span><br />
+             <span class="staffh2">Клинер, Тайпер, Создатель</span></div>
+             
+             </div>
+             <div class="staffvkicon">
+             <span id="staffanonbl"><b>ГРЕБАНЫЙ<br />АНОНИМУС</b></span>
+             </div>
+        </div>
+    </div>
+    <div class="staff">
+         <div class="staffcard">
+             <img class="staffavatar" src="assets/img/avatars/veder.png" alt="Ну, это макс." center>
+         <div class="stafftext">
+            <div> <span class="staffh"><b>veder</b></span><br />
+             <span class="staffh2">Переводчик</span></div>
+             
+             </div>
+             <div class="staffvkicon">
+             <a id="staffvk" href="https://vk.com/usus_yt"><i  class="fab fa-vk"></i></a>
+             </div>
+        </div>
+    </div>
+    <div class="staff">
+         <div class="staffcard">
+             <img class="staffavatar" src="assets/img/avatars/itsolegdm.jpg" alt="Че это за чел?????" center>
+         <div class="stafftext">
+            <div> <span class="staffh"><b>ItsOlegDm</b></span><br />
+             <span class="staffh2">это кто вще?</span></div>
+             
+             </div>
+             <div class="staffvkicon">
+             <a id="staffvk" href="https://vk.com/itsolegdm"><i  class="fab fa-vk"></i></a>
+             </div>
+        </div>
+    </div>
+    <div class="staff">
+        <div class="staffcard1">
+            <div class="c1"><div class="c2"><span class="staffh c11"><b>А также:</b></span><br />
+             <span class="staffh2">Еще 7 тел пожелавших остатся анонимными</span></div></div>
+        </div> 
+             
+        
+    </div>
+    
+    
+        </div>
+    </div>
+    
+</body>
+    <footer><div class="footer">
+        <span class="footer"><p>Все материалы, размещённые на данном сайте, предназначены для бесплатного ознакомления.</p></span>
+    <span class="footer">&copy; wlopfans.club |</span>
+    <a class="footer" href="https://vk.com/wang_ling">https://vk.com/wang_ling</a>
+        </div>
+        </footer>
+        
+</html>
