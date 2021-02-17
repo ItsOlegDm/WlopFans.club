@@ -82,7 +82,7 @@ body {
 .info {
     display: flex;
     max-width: 900px;
-    min-height: 500px;
+    padding-top: 30px;
     align-items: center;
 }
 .wlopphoto {
@@ -190,6 +190,7 @@ body {
 
 /* Футер */
 footer {
+    text-align: center;
     background-color: #333333;
     position: absolute;
     left: 0;
@@ -209,6 +210,15 @@ a.footer {
 }
 div.footer {
     padding: 15px;
+   
+}
+#footer1 {
+    color: #5e5e5e;
+}
+#footer2 {
+    color: #a1a1a1;
+    font-size: 20px;
+    padding-top: 30px;
 }
 /* Стафф карточки */
 .staff {
