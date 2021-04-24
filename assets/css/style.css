@@ -249,7 +249,7 @@ div.footer {
     padding-left: 30px;
     display: flex;
     align-items: center;
-    width:  400px;
+    width:  500px;
     
 }
 .c1 {
@@ -305,7 +305,7 @@ div.footer {
     .staffcard {
         display: block;
         width: 300px;
-        height: 373px;
+        height: fit-content;
         position: static;
     }
     .staffcard1 {
@@ -385,20 +385,3 @@ div.footer {
     background-color: #363636;
     color: #ededed;
 }
-/* изменяем полоcу прокрутки */
-/* 
-
-
-::-webkit-scrollbar {
-    width: .65em;
-}
-
-::-webkit-scrollbar-track {
-    background-color: rgba(217, 217, 217, 0.0);
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(170, 170, 170, 0.6);
-    border-radius: 5px;
-    box-shadow: inset 0.05em 0.05em 0 rgba(0, 0, 0, 0.1), inset 0 -0.05em 0 rgba(0, 0, 0, 0.07);
-}*/
