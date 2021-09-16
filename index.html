@@ -7,24 +7,62 @@
     <!-- <meta name="image" content="https://wlopfans.club/assets/img/gblogo.png"> -->
     <meta name="name" content="NIXEU">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/menustyle.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="intro">
         <img src="assets/img/intro1.png" alt="" class="intro">
         <span class="intro">WLOPFANS<span>.club</span></span>
-        <a href="https://vk.com/raidyhd" class="raidyhd">BACKGROUND BY RAIDYHD</a>
+        <a href="https://vk.com/raidyhd" target="_blank" class="raidyhd">BACKGROUND BY RAIDYHD</a>
     </div>
 
     <div class="container">
         <div class="infocard">
-            <img src="assets/img/photo_wlop.jpg" alt="Wang Ling">
-            <div>
-                <p><b>Wang Ling</b> (кит. 王凌, 5 июня 1987) — китайский художник самоучка, известный под псевдонимом WLOP. Живет и работает в Гонконге инженером-программистом</p>
-                <p>Предпочтение отдает фэнтези тематике и средневековью. Особенностью стиля является изображение портретов женских персонажей. Довольно часто исполняет фан и концепт арты к популярным аниме и играм.</p>
+            <div class="infocontent">
+                <img src="assets/img/photo_wlop.jpg" alt="Wang Ling">
+                <div>
+                    <p><b>Wang Ling</b> (кит. 王凌, 5 июня 1987) — китайский художник самоучка, известный под псевдонимом WLOP. Живет и работает в Гонконге инженером-программистом</p>
+                    <p>Предпочтение отдает фэнтези тематике и средневековью. Особенностью стиля является изображение портретов женских персонажей. Довольно часто исполняет фан и концепт арты к популярным аниме и играм.</p>
+                </div>
+            </div>
+            <div class="linksinfo">
+                <button class="accordion">Полезные ссылки</button>
+                  <div class="panel">
+                     <div class="menuitem">
+                        <a href="https://readmanga.live/list/person/wlopfans_club" target="_blank" class="menuitem">
+                           <span>Мы на readmanga.live</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                     <div class="menuitem">
+                        <a href="https://vk.com/wang_ling" class="menuitem">
+                           <span>Мы в VK</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                     <div class="menuitem">
+                        <a href="https://natribu.org" class="menuitem">
+                           <span>Наш Discord сервер</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+
+                     <button class="accordion">Официальные </button>
+                        <div class="panel panel2">
+                            <div class="menuitem">
+                                <a href="https://readmanga.live/list/person/wlopfans_club" target="_blank" class="menuitem">
+                                <span>Мы на readmanga.live</span>
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                  
+                    </div>
             </div>
         </div>
-
         <h1>Переводы</h1>
 
         <div class="cards">
@@ -50,7 +88,7 @@
 
 
         <div class="teemcard">
-            <div> 
+            <div class="avatarandtext"> 
                 <img class="teemavatar" src="assets/img/avatars/aliya.png" alt="">
                 <div class="cardtext">
                     <span class="cardname">Алия</span>
@@ -59,24 +97,95 @@
                 </div>
             </div>
             <div class="socialbtn">
-                <span class="anon">ANONIMUS</span>
+                <span class="anon" title="ооо повезло повезло">ANONIMUS</span>
+                
             </div>
         </div>
+
         <div class="teemcard">
-            <div> 
-                <img class="teemavatar" src="assets/img/avatars/aliya.png" alt="">
+            <div class="avatarandtext"> 
+                <img class="teemavatar" src="assets/img/avatars/veder.png" alt="">
                 <div class="cardtext">
-                    <span class="cardname">ItsOlegDm</span>
+                    <span class="cardname">veder</span>
                     <br>
-                    <span class="cardabout">who?</span>
+                    <span class="cardabout">Переводчик</span>
                 </div>
             </div>
             <div class="socialbtn">
                 <!-- <span class="anon">ANONIMUS</span> -->
-                <a class="teemicon"><i class="fab fa-vk"></i></ion-icon></a>
-                <a class="teemicon"><i class="fab fa-telegram-plane"></i></ion-icon></a>
+                <a class="teemicon" target="_blank" href="https://vk.com/usus_yt"><ion-icon aria-label="Открыть вк" name="logo-vk"></ion-icon><span class="vkcardtext">ВКонтакте</span></a>
+                <!-- <a class="teemicon"><i class="fab fa-telegram-plane"></i></ion-icon></a> -->
             </div>
-        </div>              
+        </div> 
+
+        <div class="teemcard">
+            <div class="avatarandtext"> 
+                <img class="teemavatar" src="assets/img/avatars/yana.png" alt="">
+                <div class="cardtext">
+                    <span class="cardname">Яна</span>
+                    <br>
+                    <span class="cardabout">Переводчик</span>
+                </div>
+            </div>
+            <div class="socialbtn">
+                <!-- <span class="anon">ANONIMUS</span> -->
+                <a class="teemicon" target="_blank" href="https://vk.com/id454525019"><ion-icon aria-label="Открыть вк" name="logo-vk"></ion-icon><span class="vkcardtext">ВКонтакте</span></a>
+                <!-- <a class="teemicon"><i class="fab fa-telegram-plane"></i></ion-icon></a> -->
+            </div>
+        </div> 
+
+        <div class="teemcard">
+            <div class="avatarandtext"> 
+                <img class="teemavatar" src="assets/img/avatars/itsolegdm.png" alt="">
+                <div class="cardtext">
+                    <span class="cardname">ItsOlegDm</span>
+                    <br>
+                    <span class="cardabout">это кто вообще?</span>
+                </div>
+            </div>
+            <div class="socialbtn">
+                <!-- <span class="anon">ANONIMUS</span> -->
+                <a class="teemicon" target="_blank" href="https://vk.com/itsolegdm"><ion-icon aria-label="Открыть вк" name="logo-vk"></ion-icon><span class="vkcardtext">ВКонтакте</span></a>
+                <!-- <a class="teemicon"><i class="fab fa-telegram-plane"></i></ion-icon></a> -->
+            </div>
+        </div> 
+
+        <div class="teemcard">
+            <div class="avatarandtext"> 
+                <img class="teemavatar" src="assets/img/avatars/kris.png" alt="">
+                <div class="cardtext">
+                    <span class="cardname">Kr3st1k</span>
+                    <br>
+                    <span class="cardabout">Моральная поддержка<br>и помощь с говнокодом сайта :)</span>
+                </div>
+            </div>
+            <div class="socialbtn">
+                <!-- <span class="anon">ANONIMUS</span> -->
+                <a class="teemicon" target="_blank" href="https://vk.com/kristian5336"><ion-icon aria-label="Открыть вк" name="logo-vk"></ion-icon><span class="vkcardtext">ВКонтакте</span></a>
+                <!-- <a class="teemicon"><i class="fab fa-telegram-plane"></i></ion-icon></a> -->
+            </div>
+        </div> 
+
+        <div class="teemcard">
+            <div class="avatarandtext"> 
+                <img class="teemavatar" src="assets/img/avatars/frank.png" alt="">
+                <div class="cardtext">
+                    <span class="cardname">FrankBrotha</span>
+                    <br>
+                    <span class="cardabout">Редактор</span>
+                </div>
+            </div>
+            <div class="socialbtn">
+                <!-- <span class="anon">ANONIMUS</span> -->
+                <a class="teemicon" target="_blank" href="https://vk.com/frankbrotha"><ion-icon aria-label="Открыть вк" name="logo-vk"></ion-icon><span class="vkcardtext">ВКонтакте</span></a>
+                <!-- <a class="teemicon"><i class="fab fa-telegram-plane"></i></ion-icon></a> -->
+            </div>
+        </div> 
+
+        <div class="teemcard">
+                    <span class="cardname">А также:</span>
+                    <span class="cardabout">Еще 5 тел, пожелавших остаться анонимными.</span>
+        </div>
 
     
     
@@ -85,3 +194,39 @@
     
     
     </div> <!--конец контейнера-->
+
+    <div class="footer">
+        <span class="footertext">Все материалы, размещённые на данном сайте, предназначены для бесплатного ознакомления.</span>
+    </div>
+
+<script>
+        $(document).ready(function() {
+          $(".accordion").click(function() {
+            console.log($(this))
+            $(this).toggleClass('active').siblings('.accordion').removeClass('active');
+            var panel = $(this).next(".panel")
+            var panel2 = $(".panel2")
+            console.log(panel2);
+            panel.css({
+                'maxHeight': panel.prop('scrollHeight'),
+                // 'marginTop': '7px'
+              })
+            if (panel.css('maxHeight') != '0px'){
+              panel.css({
+                'maxHeight': '0px',
+                // 'marginTop': '0px'
+              })
+            } else {
+              panel.css({
+                'maxHeight': panel.prop('scrollHeight')+panel2.prop('scrollHeight'),
+                // 'marginTop': '7px'
+              })
+            }
+            var panel = $(panel).siblings('.panel')
+            panel.css({
+                'maxHeight': panel.prop('scrollHeight')+panel2.prop('scrollHeight'),
+                // 'marginTop': '0px'
+              })
+          });
+        });
+</script>

@@ -116,27 +116,32 @@ div.infocard {
     width: 700px;
     padding: 20px;
     display: flex;
-    align-items: center;
     box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 35px 0 rgb(0 0 0 / 6%);
     -webkit-box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 35px 0 #3b3a3b;
     margin-top: 40px;
     margin-bottom: 20px;
+    flex-direction: column;
 }
 
-div.infocard>img {
+div.infocontent>img {
     border-radius: 50%;
     /* width: 230px; */
     height: 230px;
     padding: 10px;
 }
 
-div.infocard>div {
+div.infocontent>div {
     padding-left: 20px;
 }
 
-div.infocard>div>p {
+div.infocontent>div>p {
     margin-block-start: 1em;
     margin-block-end: 1em;
+}
+
+div.infocontent {
+    display: flex;
+    align-items: center;
 }
 
 @media screen and (max-width: 815px) {
@@ -144,6 +149,9 @@ div.infocard>div>p {
         width: calc(100% - 60px);
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    div.infocontent {
         flex-direction: column;
     }
 }
@@ -159,7 +167,7 @@ h1 {
 /* Карточка с переводом */
 
 div.transcard {
-    width: 700px;
+    width: 680px;
     padding: 0 30px 0 30px;
     height: 85px;
     display: flex;
@@ -230,15 +238,24 @@ a.btn:hover {
 }
 
 a.teemicon {
-    font-size: 14px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #3a3a3a;
+    font-size: 16px;
+    width: 38px; 
+    height: 38px;
+    border-radius: 50px;
+    background-color: #3a3a3a;;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 6px;
+    transition: .2s;
+    cursor: pointer;
+    color: #cccccc;
+}
+
+a.teemicon>span {
+    visibility: hidden;
+    width: 0px;
+    font-weight:600;
 }
 
 a.teemicon:hover {
@@ -252,6 +269,50 @@ a.teemicon :first-child {
     margin: 0;
 }
 
+@media screen and (min-width: 550px) {
+    div.socialbtn:hover  a.teemicon>span {
+        visibility: visible;
+        width: unset;
+        padding-left: 5px;
+        transition: .4s;
+    }
+    div.socialbtn:hover  a.teemicon {
+        width: unset;
+        padding: 0px 16px 0px 16px;
+        transition: .4s;
+    }
+    div.socialbtn:hover  a.teemicon>ion-icon {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    a.teemicon {
+        font-size: 16px;
+        width: unset;
+        height: unset;
+        border-radius: 50px;
+        background-color: #3a3a3a;
+        padding: 10px 16px 10px 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 6px;
+        transition: .2s;
+ 
+    }
+    
+    a.teemicon>span {
+        display: unset;
+        visibility: visible;
+        width: unset;
+        padding-left: 5px;
+    }
+    
+    a.teemicon>ion-icon {
+        font-size: 20px;
+    }
+}
 /* Карточка члена команды */
 
 div.teemcard {
@@ -264,8 +325,8 @@ div.teemcard {
     margin-top: 17px;
     border-radius: 10px;
     background-color: #474747;
-    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 10px 0 rgb(0 0 0 / 6%);
-    -webkit-box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 10px 0 #3b3a3b;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 15px 0 rgb(0 0 0 / 6%);
+    -webkit-box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 15px 0 #3b3a3b;
 }
 
 div.teemcard:first-child {
@@ -282,7 +343,10 @@ div.cardtext {
     margin-left: 30px;
 }
 
-
+div.teemcard:last-child {
+    justify-content: center;
+    flex-direction: column;
+}
 
 img.teemavatar {
     width: 90px;
@@ -297,13 +361,71 @@ div.socialbtn {
 
 span.anon { /* :D */
     font-size: 12px;
+    /* margin-right: 5px; */
+    cursor: pointer;
 }
 
 span.cardname {
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 span.cardabout {
     font-size: 12px;
+}
+
+
+@media screen and (max-width: 818px) {
+    div.teemcard {
+        width: calc(100% - 20px)!important;
+    }
+}
+@media screen and (max-width: 500px) {
+    .teemcard {
+        flex-direction: column;
+        width: calc(100% - 20px)!important;
+        height: fit-content!important;
+    }
+    .avatarandtext {
+        flex-direction: column;
+    }
+    .teemavatar {
+        width: 100%!important;
+        height: auto!important;
+    }
+
+    .cardtext {
+        margin-top: 10px;
+        margin-left: 0!important;
+        text-align: center;
+    }
+
+    .socialbtn {
+        margin: 15px 0 15px 0;
+        margin-right: 0!important;
+    }
+    .anon {
+        margin: 15px 0 15px 0;
+        font-weight: bold;
+    }
+    .cardabout {
+        margin-top: 5px
+    }
+    span.cardname {
+        font-size: 26px;
+    }
+
+    div.teemcard:last-child {
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px 0 15px;
+    }
+}
+
+
+/* footer */
+
+div.footer {
+    width: 100%;
+    padding: 15px 0 10px;
 }
