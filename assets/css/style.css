@@ -28,6 +28,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -45,6 +46,7 @@ div.container {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 30px;
 }
 
 /* Интро (верхушка сайта) */
@@ -113,7 +115,7 @@ div.infocard {
     background-color: #474747;
     border-radius: 10px;
     height: fit-content;
-    width: 700px;
+    width: 740px;
     padding: 20px;
     display: flex;
     box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 35px 0 rgb(0 0 0 / 6%);
@@ -146,7 +148,7 @@ div.infocontent {
 
 @media screen and (max-width: 815px) {
     div.infocard {
-        width: calc(100% - 60px);
+        width: calc(100% - 20px);
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -167,7 +169,7 @@ h1 {
 /* Карточка с переводом */
 
 div.transcard {
-    width: 680px;
+    width: 740px;
     padding: 0 30px 0 30px;
     height: 85px;
     display: flex;
@@ -197,7 +199,7 @@ span.transh1 {
 
 @media screen and (max-width: 815px) {
     div.transcard {
-        width: calc(100% - 80px);
+        width: calc(100% - 20px);
         margin-left: 10px;
         margin-right: 10px;
         flex-direction: column;
@@ -427,5 +429,20 @@ span.cardabout {
 
 div.footer {
     width: 100%;
-    padding: 15px 0 10px;
+    padding: 15px 30px 15px 30px;
+    background-color: #333333;
+    box-sizing: border-box;
+}
+
+span.footnick {
+    font-size: 30px;
+    font-family: Lato-Hairline, Geneva, Tahoma, sans-serif;
+}
+span.footnick>span {
+    font-size: 15px;
+    /* font-family: Monad, Geneva, Tahoma, sans-serif; */
+} 
+
+div.ficons {
+    font-size: 20px;
 }
