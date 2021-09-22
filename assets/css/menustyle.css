@@ -81,10 +81,17 @@ a.menuitem {
   margin-top: 8px;
   border-radius: 5px;
   transition: .5s;
-
-
   background-color: #7979791c;
 }
+
+a.menuitem>span {
+  display: flex;
+  align-items: center;
+}
+a.menuitem>span>ion-icon {
+  margin-right: 10px;
+}
+
 .closemenu {
   cursor: pointer;
 }
