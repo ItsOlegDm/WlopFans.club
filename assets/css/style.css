@@ -120,7 +120,7 @@ div.infocard {
     border-radius: 10px;
     height: fit-content;
     width: 740px;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 35px 0 rgb(0 0 0 / 6%);
     -webkit-box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 35px 0 #3b3a3b;
@@ -148,6 +148,7 @@ div.infocontent>div>p {
 div.infocontent {
     display: flex;
     align-items: center;
+    /* margin-bottom: 10px; */
 }
 
 @media screen and (max-width: 815px) {
@@ -350,7 +351,7 @@ div.cardtext {
     margin-left: 30px;
 }
 
-div.teemcard:last-child {
+div.teemcard.last {
     justify-content: center;
     flex-direction: column;
 }
@@ -379,6 +380,22 @@ span.cardname {
 
 span.cardabout {
     font-size: 12px;
+}
+
+div.linkcard {
+    width: 740px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    overflow: hidden;
+    flex-direction: column;
+    margin-top: 17px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #474747;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 15px 0 rgb(0 0 0 / 6%);
+    -webkit-box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 15px 0 #3b3a3b;
 }
 
 
@@ -423,17 +440,33 @@ span.cardabout {
         font-size: 26px;
     }
 
-    div.teemcard:last-child {
+    div.teemcard.last {
         justify-content: center;
         flex-direction: column;
         padding: 15px 0 15px;
     }
+    div.linkcard {
+        width: calc(100% - 20px)!important;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* footer */
 
-/*div.footer {
+div.footer {
     width: 100%;
     padding: 15px 30px 10px 30px;
     background-color: #333333;
@@ -441,6 +474,8 @@ span.cardabout {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    ;
 }
 
 span.footertext {
@@ -468,18 +503,22 @@ div.ficons {
 
 ion-icon.rm {
     font-size: 18px;
-} */
+}
+
+
+
+
+
 
 /* footer */
 
-div.footer {
+/* div.footer {
     width: 100%;
     padding: 15px 15px 15px 15px;
     background-color: #333333;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    /* align-items:  center; */
 }
 div.widget {
     box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 15px 0 rgb(0 0 0 / 6%);
@@ -497,7 +536,6 @@ span.footnick>span {
     font-size: 2vw;
 } 
 div.footcont2 {
-    /* width: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -506,5 +544,5 @@ div.footcont2 {
 }
 
 div.footcont2>div.menuitem {
-    width: 100%;
-}
+    width: 90%;
+} */
