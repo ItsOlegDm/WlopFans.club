@@ -484,65 +484,22 @@ span.footertext {
     margin-top: 5px;
 }
 
-span.footnick {
-    font-size: 30px;
-    font-family: Lato-Hairline, Geneva, Tahoma, sans-serif;
-}
-span.footnick>span {
-    font-size: 15px;
-} 
-div.footerbtnlogo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-div.ficons {
+div.footericons {
     font-size: 20px;
+    margin-top: 6px;
 }
 
 ion-icon.rm {
-    font-size: 18px;
+    font-size: 20px;
 }
 
-
-
-
-
-
-/* footer */
-
-/* div.footer {
-    width: 100%;
-    padding: 15px 15px 15px 15px;
-    background-color: #333333;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-}
-div.widget {
-    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 15px 0 rgb(0 0 0 / 6%);
-    -webkit-box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 15px 0#353535;
-}
-div.footcont {
-    display: flex;
-    justify-content: space-around;
-}
-span.footnick {
-    font-size: 4vw;
-    font-family: Lato-Hairline, Geneva, Tahoma, sans-serif;
-}
-span.footnick>span {
-    font-size: 2vw;
-} 
-div.footcont2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+a.fmenuitem {
+    text-decoration: none;
+    color: #6a6a6a;
+    transition: 0.4s;
 }
 
-div.footcont2>div.menuitem {
-    width: 90%;
-} */
+a.fmenuitem:hover {
+    color: #d1d1d1;
+}
+
