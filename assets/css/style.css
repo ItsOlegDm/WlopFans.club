@@ -1,387 +1,526 @@
-@import url('https://fonts.googleapis.com/css?family=Mukta:700');
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import "introimg.css";
+
 @font-face {
-    font-family: Uni-Sans-Bold; 
-    src: url(../fonts/unisans.ttf); 
+    font-family: GothamPro; 
+    src: url(../fonts/GothamPro.ttf); 
 }
+
 @font-face {
+    font-family: GothamBlack; 
+    src: url(../fonts/GothamPro-Black.ttf); 
+}
+
+/* @font-face {
     font-family: Uni-Sans-Thin; 
     src: url(../fonts/Uni-Sans-Thin.ttf); 
-}
+} */
+
 @font-face {
     font-family: Lato-Hairline; 
     src: url(../fonts/Lato-Hairline.ttf); 
 }
 
 @font-face {
-    font-family: Roboto-Regular; 
-    src: url(../fonts/Roboto-Regular.ttf); 
-}
-@font-face {
-    font-family: Roboto-Medium; 
-    src: url(../fonts/Roboto-Medium.ttf); 
+    font-family: Monad; 
+    src: url(../fonts/Monad.ttf); 
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
 
 body {
-    background-color: #454545;
+    background: #3b3a3a;
+    color: #CCCCCC;
+    font-family: GothamPro,Arial, Helvetica, sans-serif;
 }
 
+ion-icon {
+    pointer-events: none;
+}
 
-.intro {
+div.container {
     display: flex;
-   align-items: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
+    margin-bottom: 30px;
 }
-.intro-img {
-    position: absolute;
+
+/* Интро (верхушка сайта) */
+
+div.intro {
     width: 100%;
     height: 100%;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    background: url(../img/intro.jpg) no-repeat center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-size: cover;
-     z-index: -1;
-}
-.wloph {
-    font-family: Lato-Hairline;
-    font-size: 192px;
-    z-index: 10;
-    color: white;
-    
-    
-}
-.wloph2 {
-    font-family: Uni-Sans-Thin;
-    font-size: 48px;
-    z-index: 10;
-    color: white;
+    background-color: #4900a8;
     position: relative;
-    left: -10px;
 }
-.textintro {
-    vertical-align: middle;
-    padding-left: 13em;
+
+img.intro {
+    max-height: 20em;
+    max-width: 90%;
+}
+span.intro {
+    font-size: 4rem;
+    font-family: Lato-Hairline, Geneva, Tahoma, sans-serif;
+    color: #fff;
+}
+span.intro>span {
+    font-size: 1.2rem;
+}
+
+a.raidyhd {
+    font-family: Monad, Geneva, Tahoma, sans-serif;
+    color: white;
+    opacity: 0.6;
+    transition: .2s;
+    font-size: 13px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+a.raidyhd:hover {
+    opacity: 1;
+}
+
+div.introicons {
+    font-size: 25px;
+}
+a.introitem {
+    text-decoration: none;
+    color: #cccccc;
+    transition: 0.4s;
+    opacity: .5;
+    padding-right: 5px;
+}
+
+a.introitem:last-child {
+    padding: 0;
+}
+
+a.introitem:hover {
+    color: #d1d1d1;
+    opacity: 1;
 }
 
 
-.center {
+
+@media screen and (max-width: 815px) { 
+    span.intro {
+        font-size: 12vw;
+    }
+
+    span.intro>span {
+        font-size: .5em;
+    }
+    a.raidyhd {
+        right: auto;
+        bottom: auto;
+        top: 10px;
+        width: 100%;
+        text-align: center;
+        opacity: .5;
+    }
+
+}
+/* Карточка с информацией о влоп'е */
+div.infocard {
+    background-color: #474747;
+    border-radius: 10px;
+    height: fit-content;
+    width: 740px;
+    padding: 15px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
-
-}
-.center1 {
-    align-items: center;
-
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 35px 0 rgb(0 0 0 / 6%);
+    -webkit-box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 35px 0 #3b3a3b;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    flex-direction: column;
 }
 
-.info {
-    display: flex;
-    max-width: 900px;
-    padding-top: 30px;
-    align-items: center;
-}
-.wlopphoto {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-   
-}
-
-.photo1 {
+div.infocontent>img {
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    position: relative;
+    /* width: 230px; */
+    height: 230px;
+    padding: 10px;
 }
 
-.infotext {
-    max-width: 500px;
-    margin-left: 40px;
-    font-family: 'Rubik', sans-serif;
+div.infocontent>div {
+    padding-left: 20px;
+}
+
+div.infocontent>div>p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+div.infocontent {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 10px; */
+}
+
+@media screen and (max-width: 815px) {
+    div.infocard {
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    div.infocontent {
+        flex-direction: column;
+    }
+}
+
+/* Заголовок*/
+h1 {
+    font-family: GothamBlack,Arial, Helvetica, sans-serif;
+    font-size: 45px;
     color: white;
+    width: fit-content;
 }
 
-@media screen and (min-width: 901px) {
-    
+/* Карточка с переводом */
+
+div.transcard {
+    width: 740px;
+    padding: 0 30px 0 30px;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+    border-radius: 10px;
+    background-color: #474747;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 10px 0 rgb(0 0 0 / 6%);
+    -webkit-box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 10px 0 #3b3a3b;
+    margin-top: 15px;
 }
-@media screen and (max-width: 900px) {
-    .intro {
+
+div.transcard:first-child {
+    margin-top: 20px
+}
+
+div.transcard:last-child {
+    margin-bottom: 20px
+}
+
+span.transh1 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+@media screen and (max-width: 815px) {
+    div.transcard {
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+        flex-direction: column;
+        justify-content: center;
+        height: 100px;
+    }
+
+    div.cards {
+        width: 100%;
+    }
+
+    div.transbtn {
+        height: 38px;
         display: flex;
         align-items: center;
+        margin-top: 10px
+    }
+}
+
+/* кнопки */
+
+a.btn {
+    padding: 10px 16px 10px 16px;
+    border-radius: 50px;
+    background-color: #3a3a3a;
+    font-weight: bold;
+    transition: .2s;
+    cursor: pointer;
+    color: #cccccc;
+}
+
+
+a.btn:hover {
+    background-color: #555555;
+    color:#e6e6e6;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 10px 0 rgb(0 0 0 / 6%);
+    -webkit-box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 10px 0 #3b3a3b;
+}
+
+a.teemicon {
+    font-size: 16px;
+    width: 38px; 
+    height: 38px;
+    border-radius: 50px;
+    background-color: #3a3a3a;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6px;
+    transition: .2s;
+    cursor: pointer;
+    color: #cccccc;
+}
+
+a.teemicon>span {
+    visibility: hidden;
+    width: 0px;
+    font-weight:600;
+    overflow: hidden;
+}
+
+a.teemicon:hover {
+    background-color: #555555;
+    color:#e6e6e6;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 10px 0 rgb(0 0 0 / 6%);
+    -webkit-box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 10px 0 #3b3a3b;
+}
+
+a.teemicon :first-child {
+    margin: 0;
+}
+
+/* @media screen and (min-width: 550px) {
+    div.socialbtn:hover  a.teemicon>span {
+        visibility: visible;
+        max-width: 100%;
+        padding-left: 5px;
+        transition: .5s;
+    }
+    div.socialbtn:hover  a.teemicon {
+        width: unset;
+        padding: 0px 16px 0px 16px;
+        transition: .4s;
+    }
+    div.socialbtn:hover  a.teemicon>ion-icon {
+        font-size: 20px;
+    }
+} */
+
+@media screen and (max-width: 500px) {
+    a.teemicon {
+        font-size: 16px;
+        width: unset;
+        height: unset;
+        border-radius: 50px;
+        background-color: #3a3a3a;
+        padding: 10px 16px 10px 16px;
+        display: flex;
         justify-content: center;
-    }
-    .textintro {
-        padding-left: 0;
-        
-    }
-    .infotext {
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-left: 0;
-        font-size: 21px;
-    }
-    .info {
-      display: block;
-    }
-    .wlopphoto {
-        padding-top: 20px;
-    }
-    .wloph {
-        font-size: 92px;
-    }
-    .wloph2 {
-        font-size: 30px;
-    }
-    .paddingcard {
-        padding-right: 0;
-    }
-    .cards {
-    display: block!important;
+        align-items: center;
+        margin-left: 6px;
+        transition: .2s;
+ 
     }
     
-}
- /*Карточки*/
-.cards {
-    display: flex;
-    padding-bottom: 10px;
-}
-.card {
-    width: 300px;
-    background-color: white;
-    text-align: center;
-    font-family: 'Rubik', sans-serif;
-    border: 0px solid white;
-    border-radius: 5px;
-}
-.cardimg {
-    width: 300px;
-    height: 300px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-.cardbutton {
-    padding-top: 10px;
-    padding-bottom: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.paddingcard {
-        height: 65px;
-        width: 65px;
+    a.teemicon>span {
+        display: unset;
+        visibility: visible;
+        width: unset;
+        padding-left: 5px;
     }
-.cardb {
-    border-bottom: 1px solid black;
-}
-.cardsh {
-    text-align: center;
-    font-family: Uni-Sans-Bold;
-    padding-top: 55px;
-    padding-bottom: 30px;
-    color: white;
-    font-size: 70px;
-}
-
-/* Футер */
-footer {
-    text-align: center;
-    background-color: #333333;
-    position: absolute;
-    left: 0;
-    right: 0;
-    color: #999999;
-    font-family: 'Rubik', sans-serif;
-
-}
-p.footer,span.footer{
-
-}
-a.footer {
-    text-decoration: none;
-    color: #999999!important;
-
-   
-}
-div.footer {
-    padding: 15px;
-   
-}
-#footer1 {
-    color: #5e5e5e;
-}
-#footer2 {
-    color: #a1a1a1;
-    font-size: 20px;
-    padding-top: 30px;
-}
-/* Стафф карточки */
-.staff {
- padding-bottom: 30px;
-}
-.staffcard {
-    width: 800px;
-    height: 90px;
-    background-color: white;
-    display: flex;
-    border: 0px solid white;
-    border-radius: 5px;
-}
-.staffcard1 {
-    width: 800px;
-    height: 90px;
-    background-color: white;
-    display: flex;
-    border: 0px solid white;
-    border-radius: 5px;
-}
-.staffavatar {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-.stafftext {
-    height: 90px;
-    padding-left: 30px;
-    display: flex;
-    align-items: center;
-    width:  500px;
     
+    a.teemicon>ion-icon {
+        font-size: 20px;
+    }
 }
-.c1 {
-    width: 800px;
+/* Карточка члена команды */
+
+div.teemcard {
+    width: 740px;
     height: 90px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+    margin-top: 17px;
+    border-radius: 10px;
+    background-color: #474747;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 15px 0 rgb(0 0 0 / 6%);
+    -webkit-box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 15px 0 #3b3a3b;
+}
+
+div.teemcard:first-child {
+    margin-top: 20px
+}
+
+div.teemcard>div {
+    display: flex;
+    align-items: center;
+}
+
+div.cardtext {
+    height: fit-content;
+    margin-left: 30px;
+}
+
+div.teemcard.last {
     justify-content: center;
-    text-align: center;
+    flex-direction: column;
 }
-.staffh {
-    font-family: 'Rubik', sans-serif;
-    font-size: 20px;
-    color: #373737;
-}
-.staffh2 {
-    font-family: 'Rubik', sans-serif;
-    color: #606060;
-}
-.staffvkicon {
-    height: 90px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-   
-}
-.staffavatar {
+
+img.teemavatar {
     width: 90px;
     height: 90px;
 }
-#staffvk {
-    font-size: 30px;
-    position: absolute;
-    right: 30px;
-    text-decoration: none;
-    color: #405895;
-    transition: 0.2s;
-}
-#staffvk:hover {
-    color: #2861f0!important;
-}
-#staffanonbl {
-    font-size: 10px;
-    position: absolute;
-    right: 17.5px;
-    color: #2e2e2e;
-    font-family: Rubik;
+
+div.socialbtn {
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
 }
 
+span.anon { /* :D */
+    font-size: 12px;
+    /* margin-right: 5px; */
+    cursor: pointer;
+}
 
-@media screen and (max-width: 900px) {
-    .staffcard {
-        display: block;
-        width: 300px;
-        height: fit-content;
-        position: static;
-    }
-    .staffcard1 {
-        display: block;
-        width: 300px;
-        height: 90px;
-        position: static;
-        justify-content: center;
-        align-items: center;
-    }
-    .staff {
-        display: block;
-    }
-   .staffavatar {
-    width: 300px;
-    height: 300px;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 5px;
-    }
-    #staffvk {
-    right: 10px;
-    bottom: 10px;
-    color: #2861f0;
-    }
-    .staffvkicon {
-        padding-top: 6.5px;
-        padding-right: 20px;
-    height: auto;
-    width: auto;
-    display: block;
-    }
-    .stafftext {
-    padding-top: 10px;
-    height: auto;
-    padding-left: 20px;
-    display: block;
-    width:  auto;
-    }
-    #staffanonbl {
-    display: none;
-    }
-    .c1 {
-        width: 300px;
-        height: auto;
-    }
-    .c11 {
-        font-size: 30px;
-        padding-bottom: 5px;
-    }
-    .c2 {
-        padding-top: 5px;
-        padding-bottom: 10px;
-    }
-    .button-text {
-    background-color: #363636;
-    color: #ededed!important;
-}
-}
-/* Кнопки */
-.button-text {
-    display: block;
-    color: #363636;
-    font-family: Rubik;
+span.cardname {
+    font-weight: bold;
     font-size: 20px;
-    transition: 0.2s;
-    padding: 10px 0 10px 0;
-    border: 3px solid #363636;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    text-decoration: none;
-    width: 130px;
+}
 
+span.cardabout {
+    font-size: 12px;
 }
-.button-text:hover {
-    background-color: #363636;
-    color: #ededed;
+
+div.linkcard {
+    width: 740px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    overflow: hidden;
+    flex-direction: column;
+    margin-top: 17px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #474747;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 15px 0 rgb(0 0 0 / 6%);
+    -webkit-box-shadow: 0 2px 6px 0 rgb(0 0 0 / 11%), 0 0 15px 0 #3b3a3b;
 }
+
+
+@media screen and (max-width: 818px) {
+    div.teemcard {
+        width: calc(100% - 20px)!important;
+    }
+}
+@media screen and (max-width: 500px) {
+    .teemcard {
+        flex-direction: column;
+        width: calc(100% - 20px)!important;
+        height: fit-content!important;
+    }
+    .avatarandtext {
+        flex-direction: column;
+    }
+    .teemavatar {
+        width: 100%!important;
+        height: auto!important;
+    }
+
+    .cardtext {
+        margin-top: 10px;
+        margin-left: 0!important;
+        text-align: center;
+    }
+
+    .socialbtn {
+        margin: 15px 0 15px 0;
+        margin-right: 0!important;
+    }
+    .anon {
+        margin: 15px 0 15px 0;
+        font-weight: bold;
+    }
+    .cardabout {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    span.cardname {
+        font-size: 26px;
+    }
+
+    div.teemcard.last {
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px 0 15px;
+    }
+    div.linkcard {
+        width: calc(100% - 20px)!important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+div.footer {
+    width: 100%;
+    padding: 15px 30px 10px 30px;
+    background-color: #333333;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    ;
+}
+
+span.footertext {
+    color: #6a6a6a;
+    text-align: center;
+    margin-top: 5px;
+}
+
+div.footericons {
+    font-size: 20px;
+    margin-top: 6px;
+}
+
+ion-icon.rm {
+    font-size: 20px;
+}
+
+a.fmenuitem {
+    text-decoration: none;
+    color: #6a6a6a;
+    transition: 0.4s;
+}
+
+a.fmenuitem:hover {
+    color: #d1d1d1;
+}
+

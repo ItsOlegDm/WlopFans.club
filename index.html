@@ -1,140 +1,323 @@
-
-<html>
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="assets/css/style.css?v=5">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>WlopFans.club | Главная</title>
+    <!-- <meta name="image" content="https://wlopfans.club/assets/img/gblogo.png"> -->
+    <meta name="name" content="NIXEU">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/menustyle.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
+    <script>
+        $(document).ready(function() {
+          $(".accordion").click(function() {
+            console.log($(this))
+            $(this).toggleClass('active').siblings('.accordion').removeClass('active');
+            var panel = $(this).next(".panel")
+            // var panel2 = $(".panel2")
+            panel.css({
+                'maxHeight': panel.prop('scrollHeight'),
+                // 'marginTop': '7px'
+              })
+            if (panel.css('maxHeight') != '0px'){
+              panel.css({
+                'maxHeight': '0px',
+                // 'marginTop': '0px'
+              })
+            } else {
+              panel.css({
+                'maxHeight': panel.prop('scrollHeight')//+panel2.prop('scrollHeight'),
+                // 'marginTop': '7px'
+              })
+            }
+            var panel = $(panel).siblings('.panel')
+            panel.css({
+                'maxHeight': panel.prop('scrollHeight')//+panel2.prop('scrollHeight'),
+                // 'marginTop': '0px'
+              })
+          });
+        });
+</script>
 </head>
 <body>
+    <div class="intro">
+        <img src="assets/img/intro1.png" alt="" class="intro">
+        <span class="intro">WLOPFANS<span>.club</span></span>
+        <div class="introitems">
+            <a href="https://vk.com/wang_ling" target="_blank" class="introitem"><ion-icon title="наш вк" name="logo-vk"></ion-icon></a>
+            <a href="https://readmanga.io/list/person/wlopfans_club" target="_blank" class="introitem"><ion-icon style="font-size: 18px;" class="rm" src="assets/icons/readmanga.svg"></ion-icon></a>
+            <a href="https://vk.com/wang_ling" target="_blank" class="introitem"><ion-icon class="rm" src="assets/icons/discord.svg"></ion-icon></a>
+            <!-- <a href="https://vk.com/wang_ling" target="_blank" class="introitem"><ion-icon class="rm" src="assets/icons/telegram.svg"></ion-icon></a> -->
+        </div>
+        <a href="https://vk.com/raidyhd" target="_blank" class="raidyhd">BACKGROUND BY RAIDYHD</a>
+    </div>
 
-<div class='intro'>
+    <div class="container">
+        <div class="infocard">
+            <div class="infocontent">
+                <img src="assets/img/photo_wlop.jpg" alt="Wang Ling">
+                <div>
+                    <p><b>Wang Ling</b> (кит. 王凌, 5 июня 1987) — китайский художник самоучка, известный под псевдонимом WLOP. Живет и работает в Гонконге инженером-программистом</p>
+                    <p>Предпочтение отдает фэнтези тематике и средневековью. Особенностью стиля является изображение портретов женских персонажей. Довольно часто исполняет фан и концепт арты к популярным аниме и играм.</p>
+                </div>
+            </div>
+            <div class="linksinfo">
+                <button class="accordion first">Полезные ссылки</button>
+                  <div class="panel">
+                     <div class="menuitem">
+                        <a href="https://twitter.com/wlopwangling" target="_blank" class="menuitem" title="femzone 🏳️‍🌈">
+                           <span><ion-icon name="logo-twitter"></ion-icon> Twitter</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                     <div class="menuitem">
+                        <a href="https://www.instagram.com/wlop/" target="_blank" class="menuitem" title="instagram = facebook so its a piece of shit too">
+                           <span><ion-icon slot="icon-only" name="logo-instagram"></ion-icon> Instagram</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                     <div class="menuitem">
+                        <a href="https://www.youtube.com/channel/UCPa7bvOg_r54NaQb7GJA9Eg" target="_blank" class="menuitem">
+                           <span><ion-icon src="assets/icons/youtube.svg"></ion-icon> YouTube</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                     <div class="menuitem">
+                        <a href="https://www.artstation.com/wlop" target="_blank" class="menuitem">
+                           <span><ion-icon src="assets/icons/artstation.svg"></ion-icon> Artstation</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                     <div class="menuitem">
+                        <a href="https://www.deviantart.com/wlop" target="_blank" class="menuitem">
+                           <span><ion-icon name="logo-deviantart"></ion-icon> Deviantart</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                     <div class="menuitem">
+                        <a href="https://www.patreon.com/wlop" target="_blank" class="menuitem">
+                           <span><ion-icon class="icon" src="assets/icons/patreon.svg"></ion-icon> Patreon</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                     <div class="menuitem">
+                        <a href="https://wlop.gumroad.com/" target="_blank" class="menuitem">
+                           <span><ion-icon src="assets/icons/gumroad.svg"></ion-icon> Gumroad</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                     <div class="menuitem">
+                        <a href="https://wlopwangling.tumblr.com/" target="_blank" class="menuitem">
+                           <span><ion-icon name="logo-tumblr"></ion-icon> Tumblr</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                     <div class="menuitem">
+                        <a href="https://www.pixiv.net/en/users/2188232" target="_blank" class="menuitem">
+                           <span><ion-icon src="assets/icons/pixiv.svg"></ion-icon> Pixiv</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                     <div class="menuitem">
+                        <a href="https://www.weibo.com/wlop?is_all=1" target="_blank" class="menuitem">
+                           <span><ion-icon src="assets/icons/weibo.svg"></ion-icon> Weibo</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                     <div class="menuitem">
+                        <a href="https://space.bilibili.com/26633150" target="_blank" class="menuitem">
+                           <span><ion-icon src="/assets/icons/bilibili.svg"></ion-icon> BiliBili</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                     <div class="menuitem">
+                        <a href="https://www.facebook.com/wlopart" target="_blank" class="menuitem" title="facebook is peace of shit btw">
+                           <span><ion-icon name="logo-facebook"></ion-icon> Facebook</span>
+                           <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </a>
+                     </div>
+                    </div>
+            </div>
+        </div>
+        <h1>Переводы</h1>
+
+        <div class="cards">
+            <div class="transcard">
+                <div class="transtext">
+                    <span class="transh1">GhostBlade</span>
+                </div>
+                <div class="transbtn">
+                    <a class="btn" href="reader/contents.php">Открыть</a>
+                </div>
+            </div>
+            <div class="transcard">
+                <div class="transtext">
+                    <span class="transh1">Интервью</span>
+                </div>
+                <div class="transbtn">
+                    <a class="btn">Открыть</a>
+                </div>
+            </div>
+        </div>
     
-    <div class="textintro"><span class="wloph">WLOP</span><span class="wloph2">FANS</span></div>
-    <div class="intro-img"></div>
-    </div>
-<!--<div class="alerttimely"><p id="alerttimely">Внимание! Сайт еще в разработке!</p></div>
-    <style>
-        .alerttimely {
-            position: absolute;
-            left: 0;
-            right: 0;
-            background-color: crimson;
-        }
-        #alerttimely {
-            font-family: Uni-Sans-Bold;
-            font-size: 40px;
-            color: white;
-            text-align: center;
-        }
-        .info {
-            padding-top: 30px;
-        }
-        @media screen and (max-width: 900px) {
-            .info {
-            padding-top: 150px;
-        }
-        }
-    </style>-->
-<div class="center">
-    <div class="info">
-    <div class="wlopphoto">
-        <img src="assets/img/photo_wlop.jpg" class="photo1">
-    </div>
-        <div class="infotext">
-            <p><b>Wang Ling</b> (кит. 王凌, 5 июня 1987) — китайский художник самоучка, известный под псевдонимом WLOP. Живет в Гонконге, работает инженером-программистом.</p>
-            <p>Предпочтение отдает фэнтези-тематике и средневековью. Особенностью стиля является изображение портретов женских персонажей. Довольно часто исполняет фан и концепт арты к популярным аниме или играм.</p>
-        </div>
-    </div>
-    </div>
-    <div class="cardsh"><span>Наши переводы</span></div>
-<div class="center">
-    <div class="cards">
-        <div class="card">
-            <img class="cardimg cardb" src="assets/img/gblogo.png">
-            <p class="cardtext"><b>Призрачный Клинок | Ghost Blade</b></p>
-            <div class="cardbutton">
-    <a class="button-text" href="reader/"><b> Открыть </b></a>
+    <h1>Команда</h1>
+
+
+        <div class="teemcard">
+            <div class="avatarandtext"> 
+                <img class="teemavatar" src="assets/img/avatars/aliya.png" alt="">
+                <div class="cardtext">
+                    <span class="cardname">Алия</span>
+                    <br>
+                    <span class="cardabout">Клинер, Тайпер, Создатель</span>
+                </div>
+            </div>
+            <div class="socialbtn">
+                <span class="anon" title="ооо повезло повезло">ANONIMUS</span>
+                
             </div>
         </div>
 
-
-
-        
-        <div class="paddingcard"></div>
-        <div class="card">
-            <img class="cardimg cardb" src="assets/img/interview.png">
-            <p class="cardtext"><b>Интервью с WLOP</b></p>
-            <div class="cardbutton">
-    <a class="button-text" href="/interview_cs/"><b> Открыть </b></a>
+        <div class="teemcard">
+            <div class="avatarandtext"> 
+                <img class="teemavatar" src="assets/img/avatars/veder.png" alt="">
+                <div class="cardtext">
+                    <span class="cardname">veder</span>
+                    <br>
+                    <span class="cardabout">Переводчик</span>
+                </div>
             </div>
-        </div>
-
-
-        </div>
-         </div>
-
-<div class="cardsh"><span>Команда:</span></div>
-<div class="center">
-    <div  class="staffcards">
-        <div class="staff">
-         <div class="staffcard">
-           <div class="stavatar">  <img class="staffavatar" src="assets/img/avatars/aliya.png" alt="АХВХАВХАХВАХВАХВХАХВАХВАХВХАВХАХВАХВА" center></div>
-         <div class="stafftext">
-            <div> <span class="staffh"><b>Алия</b></span><br />
-             <span class="staffh2">Клинер, Тайпер, Создатель</span></div>
-             
-             </div>
-             <div class="staffvkicon">
-             <span id="staffanonbl"><b>ГРЕБАНЫЙ<br />АНОНИМУС</b></span>
-             </div>
-        </div>
-    </div>
-    <div class="staff">
-         <div class="staffcard">
-             <img class="staffavatar" src="assets/img/avatars/veder.png" alt="Ну, это макс." center>
-         <div class="stafftext">
-            <div> <span class="staffh"><b>veder</b></span><br />
-             <span class="staffh2">Переводчик</span></div>
-             
-             </div>
-             <div class="staffvkicon">
-             <a id="staffvk" href="https://vk.com/usus_yt"><i  class="fab fa-vk"></i></a>
-             </div>
-        </div>
-    </div>
-    <div class="staff">
-         <div class="staffcard">
-             <img class="staffavatar" src="assets/img/avatars/itsolegdm.jpg" alt="Че это за чел?????" center>
-         <div class="stafftext">
-            <div> <span class="staffh"><b>ItsOlegDm</b></span><br />
-             <span class="staffh2">это кто вще?</span></div>
-             
-             </div>
-             <div class="staffvkicon">
-             <a id="staffvk" href="https://vk.com/itsolegdm"><i  class="fab fa-vk"></i></a>
-             </div>
-        </div>
-    </div>
-    <div class="staff">
-        <div class="staffcard1">
-            <div class="c1"><div class="c2"><span class="staffh c11"><b>А также:</b></span><br />
-             <span class="staffh2">Еще 6 тел пожелавших остатся анонимными</span></div></div>
+            <div class="socialbtn">
+                <!-- <span class="anon">ANONIMUS</span> -->
+                <a class="teemicon" target="_blank" href="https://vk.com/usus_yt"><ion-icon aria-label="Открыть вк" name="logo-vk"></ion-icon><span class="vkcardtext">ВКонтакте</span></a>
+                <!-- <a class="teemicon"><i class="fab fa-telegram-plane"></i></ion-icon></a> -->
+            </div>
         </div> 
-             
-        
-    </div>
+
+        <div class="teemcard">
+            <div class="avatarandtext"> 
+                <img class="teemavatar" src="assets/img/avatars/yana.png" title="йАнус3000" alt="">
+                <div class="cardtext">
+                    <span class="cardname">Яна</span>
+                    <br>
+                    <span class="cardabout">Переводчик</span>
+                </div>
+            </div>
+            <div class="socialbtn">
+                <!-- <span class="anon">ANONIMUS</span> -->
+                <a class="teemicon" target="_blank" href="https://vk.com/id454525019"><ion-icon aria-label="Открыть вк" name="logo-vk"></ion-icon><span class="vkcardtext">ВКонтакте</span></a>
+                <!-- <a class="teemicon"><i class="fab fa-telegram-plane"></i></ion-icon></a> -->
+            </div>
+        </div> 
+
+        <div class="teemcard">
+            <div class="avatarandtext"> 
+                <img class="teemavatar" src="assets/img/avatars/itsolegdm.png" alt="">
+                <div class="cardtext">
+                    <span class="cardname">ItsOlegDm</span>
+                    <br>
+                    <span class="cardabout">это кто вообще?</span>
+                </div>
+            </div>
+            <div class="socialbtn">
+                <!-- <span class="anon">ANONIMUS</span> -->
+                <a class="teemicon" target="_blank" href="https://vk.com/itsolegdm"><ion-icon aria-label="Открыть вк" name="logo-vk"></ion-icon><span class="vkcardtext">ВКонтакте</span></a>
+                <!-- <a class="teemicon"><i class="fab fa-telegram-plane"></i></ion-icon></a> -->
+            </div>
+        </div> 
+
+        <div class="teemcard">
+            <div class="avatarandtext"> 
+                <img class="teemavatar" src="assets/img/avatars/kris.png" alt="">
+                <div class="cardtext">
+                    <span class="cardname">Kr3st1k</span>
+                    <br>
+                    <span class="cardabout">Моральная поддержка<br>и помощь с говнокодом сайта :)</span>
+                </div>
+            </div>
+            <div class="socialbtn">
+                <!-- <span class="anon">ANONIMUS</span> -->
+                <a class="teemicon" target="_blank" href="https://vk.com/kristian5336"><ion-icon aria-label="Открыть вк" name="logo-vk"></ion-icon><span class="vkcardtext">ВКонтакте</span></a>
+                <!-- <a class="teemicon"><i class="fab fa-telegram-plane"></i></ion-icon></a> -->
+            </div>
+        </div> 
+
+        <div class="teemcard">
+            <div class="avatarandtext"> 
+                <img class="teemavatar" src="assets/img/avatars/frank.png" alt="">
+                <div class="cardtext">
+                    <span class="cardname">FrankBrotha</span>
+                    <br>
+                    <span class="cardabout">Редактор</span>
+                </div>
+            </div>
+            <div class="socialbtn">
+                <!-- <span class="anon">ANONIMUS</span> -->
+                <a class="teemicon" target="_blank" href="https://vk.com/frankbrotha"><ion-icon aria-label="Открыть вк" name="logo-vk"></ion-icon><span class="vkcardtext">ВКонтакте</span></a>
+                <!-- <a class="teemicon"><i class="fab fa-telegram-plane"></i></ion-icon></a> -->
+            </div>
+        </div> 
+
+        <div class="teemcard last">
+                <span class="cardname">А также:</span>
+                <span class="cardabout">Еще 5 тел, пожелавших остаться анонимными.</span>
+        </div>
+
+        <!-- <div class="linkcard">
+            <button class="accordion">Полезные ссылки</button>
+            <div class="panel">
+                <div class="menuitem">
+                    <a href="https://www.patreon.com/wlop" target="_blank" class="menuitem">
+                       <span><ion-icon title="наш вк" name="logo-vk"></ion-icon> Наш паблик</span>
+                       <ion-icon name="chevron-forward-outline" role="img" class="md hydrated" aria-label="chevron forward outline"></ion-icon>
+                    </a>
+                </div>
+                <div class="menuitem">
+                    <a href="https://www.patreon.com/wlop" target="_blank" class="menuitem">
+                       <span><ion-icon class="rm" src="assets/icons/readmanga.svg"></ion-icon> Мы на readmanga.live</span>
+                       <ion-icon name="chevron-forward-outline" role="img" class="md hydrated" aria-label="chevron forward outline"></ion-icon>
+                    </a>
+                </div>
+                <div class="menuitem">
+                    <a href="https://www.patreon.com/wlop" target="_blank" class="menuitem">
+                       <span><ion-icon class="rm" src="assets/icons/telegram.svg"></ion-icon> Мы в Telegram</span>
+                       <ion-icon name="chevron-forward-outline" role="img" class="md hydrated" aria-label="chevron forward outline"></ion-icon>
+                    </a>
+                </div>
+                <div class="menuitem">
+                    <a href="https://www.patreon.com/wlop" target="_blank" class="menuitem">
+                       <span><ion-icon class="rm" src="assets/icons/discord.svg"></ion-icon> Наш DISCORD сервер</span>
+                       <ion-icon name="chevron-forward-outline" role="img" class="md hydrated" aria-label="chevron forward outline"></ion-icon>
+                    </a>
+                </div>
+                <div class="menuitem">
+                    <a href="https://natribu.org" target="_blank" class="menuitem">
+                       <span>Cука, да куда их втыкнуть эти ссылки блин</span>
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
     
     
+    
+    
+    
+    
+    </div> <!--конец контейнера-->
+
+    <div class="footer">
+        <span class="footertext">Все материалы, размещённые на данном сайте, предназначены для бесплатного ознакомления.</span>
+        <div class="footericons">
+            <a href="https://vk.com/wang_ling" target="_blank" class="fmenuitem"><ion-icon title="наш вк" name="logo-vk"></ion-icon></a>
+            <a href="https://readmanga.io/list/person/wlopfans_club" target="_blank" class="fmenuitem"><ion-icon style="font-size: 18px;" class="rm" src="assets/icons/readmanga.svg"></ion-icon></a>
+            <a href="https://vk.com/wang_ling" target="_blank" class="fmenuitem"><ion-icon class="rm" src="assets/icons/discord.svg"></ion-icon></a>
+            <!-- <a href="https://vk.com/wang_ling" target="_blank" class="fmenuitem"><ion-icon class="rm" src="assets/icons/telegram.svg"></ion-icon></a> -->
         </div>
     </div>
+
     
-</body>
-    <footer><div class="footer">
-        <span class="footer" id="footer1">Все материалы, размещённые на данном сайте, предназначены для бесплатного ознакомления.</span><br >
-    <span class="footer" id="footer2">&copy; wlopfans.club</span>
-        </div>
-        </footer>
-        
-</html>
