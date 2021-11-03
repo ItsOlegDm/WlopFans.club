@@ -1,3 +1,4 @@
 # Сайт Wlopfans.club
 
-![image](https://user-images.githubusercontent.com/55553104/115960128-3d3ae480-a518-11eb-8ff5-55e9f52164b1.png)
+![image](https://user-images.githubusercontent.com/55553104/140202947-0f0c8f6d-b0c2-4b17-b00a-10e59223568e.png)
+
