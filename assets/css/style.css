@@ -95,6 +95,27 @@ a.raidyhd:hover {
     opacity: 1;
 }
 
+div.introicons {
+    font-size: 25px;
+}
+a.introitem {
+    text-decoration: none;
+    color: #cccccc;
+    transition: 0.4s;
+    opacity: .5;
+    padding-right: 5px;
+}
+
+a.introitem:last-child {
+    padding: 0;
+}
+
+a.introitem:hover {
+    color: #d1d1d1;
+    opacity: 1;
+}
+
+
 
 @media screen and (max-width: 815px) { 
     span.intro {
